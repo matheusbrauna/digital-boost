@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import '@/styles/globals.css'
-import { fontHeading, fontSans } from '@/lib/fonts'
+import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
@@ -15,15 +15,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-br" className="dark">
       <body
-        className={cn(
-          'min-h-screen font-sans antialiased',
-          fontSans.variable,
-          fontHeading.variable,
-        )}
+        className={cn('bg-background font-sans antialiased', fontSans.variable)}
       >
-        {children}
+        <div className="flex min-h-screen flex-1 flex-col">{children}</div>
       </body>
     </html>
   )

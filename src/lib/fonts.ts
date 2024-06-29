@@ -1,13 +1,7 @@
-import {
-  Open_Sans as FontSans,
-  Merriweather as FontHeading,
-} from 'next/font/google'
+import { Rubik as FontSans } from 'next/font/google'
 
 export const fontSans = FontSans({
+  subsets: ['latin'],
   variable: '--font-sans',
-})
-
-export const fontHeading = FontHeading({
-  variable: '--font-heading',
-  weight: ['700'],
+  weight: ['400', '700'],
 })

@@ -12,7 +12,7 @@ export function ShinyButton() {
       )}
     >
       <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-zinc-600 hover:duration-300 hover:dark:text-zinc-400">
-        <span>✨ Introducing Magic UI</span>
+        <span>✨ Apresentando Digital Boost</span>
         <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
       </AnimatedShinyText>
     </div>

@@ -1,9 +1,13 @@
+import { Companies } from '@/components/companies'
+import { FUIPricingSectionWithBadge } from '@/components/FUIPricingSectionWithBadge'
 import { HeroSection } from '@/components/hero-section'
 
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-between px-4">
+    <main className="flex-1">
       <HeroSection />
+      <Companies />
+      <FUIPricingSectionWithBadge />
     </main>
   )
 }

@@ -99,26 +99,9 @@ const config = {
             transform: 'none',
           },
         },
-        'border-beam': {
-          '100%': {
-            'offset-distance': '100%',
-          },
-        },
-        'image-glow': {
-          '0%': {
-            content: 'var(--tw-content)',
-            opacity: '0',
-            'animation-timing-function': 'cubic-bezier(.74,.25,.76,1)',
-          },
-          '10%': {
-            content: 'var(--tw-content)',
-            opacity: '0.7',
-            'animation-timing-function': 'cubic-bezier(.12,.01,.08,.99)',
-          },
-          to: {
-            content: 'var(--tw-content)',
-            opacity: '0.4',
-          },
+        shine: {
+          from: { backgroundPosition: '200% 0' },
+          to: { backgroundPosition: '-200% 0' },
         },
       },
       animation: {
@@ -127,8 +110,7 @@ const config = {
         shimmer: 'shimmer 8s infinite',
         'fade-in': 'fade-in 1s ease forwards',
         'fade-up': 'fade-up 1s ease forwards',
-        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-        'image-glow': 'image-glow 4.1s ease-out .6s forwards',
+        shine: 'shine 8s ease-in-out infinite',
       },
     },
   },

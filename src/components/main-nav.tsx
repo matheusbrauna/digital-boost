@@ -39,7 +39,7 @@ export function MainNav() {
           )}
           asChild
         >
-          <Link href="/pricing">Pricing</Link>
+          <Link href="/servicos">Serviços</Link>
         </Button>
         <Button
           variant="ghost"
@@ -49,7 +49,7 @@ export function MainNav() {
           )}
           asChild
         >
-          <Link href="/blog">Blog</Link>
+          <Link href="/cases">Cases</Link>
         </Button>
         <Button
           variant="ghost"
@@ -59,11 +59,11 @@ export function MainNav() {
           )}
           asChild
         >
-          <Link href="/contact">Contact</Link>
+          <Link href="/contato">Contato</Link>
         </Button>
       </div>
       <div className="relative z-[1] flex items-center justify-end">
-        <Button>Get started</Button>
+        <Button>Solicite uma Consulta</Button>
       </div>
     </div>
   )

@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 
 import { ShinyButton } from '@/components/shiny-button'
@@ -5,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 export function HeroSection() {
   return (
-    <section className="pt-32">
+    <section className="pb-8 pt-32">
       <div className="container">
         <div className="flex items-center justify-center">
           <ShinyButton />
@@ -20,10 +21,17 @@ export function HeroSection() {
           crescimento do seu negócio.
         </p>
         <div className="mt-6 flex items-center justify-center gap-4">
-          <Button>Solicite uma Consulta</Button>
+          <Button
+            className="rounded-full"
+            variant="expandIcon"
+            iconPlacement="right"
+            Icon={ChevronRightIcon}
+          >
+            Solicite uma Consulta
+          </Button>
         </div>
         <div className="relative mt-20 animate-fade-up">
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-96 w-full scale-[1.1] bg-gradient-to-b from-transparent via-background to-background"></div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-96 bg-gradient-to-b from-transparent via-background to-background" />
           <div className="rounded-[32px] border bg-secondary p-3">
             <Image
               alt="header"

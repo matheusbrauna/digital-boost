@@ -2,51 +2,51 @@ import { CheckIcon, Cross2Icon } from '@radix-ui/react-icons'
 
 import { Button } from '@/components/ui/button'
 
-const plans = [
-  {
-    name: 'Plano Básico',
-    desc: 'Ideal para pequenas empresas que estão começando no marketing digital.',
-    price: 12,
-    isMostPop: false,
-    features: [
-      'Análise básica de SEO',
-      '2 campanhas de e-mail marketing',
-      'Relatório mensal de performance',
-      'Suporte via e-mail',
-    ],
-  },
-  {
-    name: 'Startup',
-    desc: 'Perfeito para startups que precisam de uma presença digital forte.',
-    price: 35,
-    isMostPop: true,
-    features: [
-      'Análise avançada de SEO',
-      '5 campanhas de e-mail marketing',
-      'Relatório quinzenal de performance',
-      'Suporte via chat e e-mail',
-      'Gestão de redes sociais',
-    ],
-  },
-  {
-    name: 'Enterprise',
-    desc: 'Para grandes empresas que buscam resultados expressivos no marketing digital.',
-    price: 60,
-    isMostPop: false,
-    features: [
-      'Análise completa de SEO',
-      'Campanhas ilimitadas de e-mail marketing',
-      'Relatório semanal de performance',
-      'Suporte 24/7',
-      'Gestão completa de redes sociais',
-      'Consultoria personalizada',
-    ],
-  },
-]
+// const plans = [
+//   {
+//     name: 'Plano Básico',
+//     desc: 'Ideal para pequenas empresas que estão começando no marketing digital.',
+//     price: 12,
+//     isMostPop: false,
+//     features: [
+//       'Análise básica de SEO',
+//       '2 campanhas de e-mail marketing',
+//       'Relatório mensal de performance',
+//       'Suporte via e-mail',
+//     ],
+//   },
+//   {
+//     name: 'Startup',
+//     desc: 'Perfeito para startups que precisam de uma presença digital forte.',
+//     price: 35,
+//     isMostPop: true,
+//     features: [
+//       'Análise avançada de SEO',
+//       '5 campanhas de e-mail marketing',
+//       'Relatório quinzenal de performance',
+//       'Suporte via chat e e-mail',
+//       'Gestão de redes sociais',
+//     ],
+//   },
+//   {
+//     name: 'Enterprise',
+//     desc: 'Para grandes empresas que buscam resultados expressivos no marketing digital.',
+//     price: 60,
+//     isMostPop: false,
+//     features: [
+//       'Análise completa de SEO',
+//       'Campanhas ilimitadas de e-mail marketing',
+//       'Relatório semanal de performance',
+//       'Suporte 24/7',
+//       'Gestão completa de redes sociais',
+//       'Consultoria personalizada',
+//     ],
+//   },
+// ]
 
-export function FUIPricingSectionWithBadge() {
+export function Pricing() {
   return (
-    <section className="pt-32">
+    <section className="grid min-h-screen place-items-center py-8">
       <div className="container">
         <div className="px-4 md:px-8">
           <div className="text-balance sm:text-center">
@@ -139,14 +139,14 @@ export function FUIPricingSectionWithBadge() {
                   </ul>
                 </div>
               </div>
-              <div className="relative divide-y rounded-2xl border shadow-sm">
+              <div className="relative rounded-2xl border shadow-sm">
                 <Button
                   variant="shine"
                   className="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full"
                 >
                   Mais popular
                 </Button>
-                <div className="p-6 sm:px-8">
+                <div className="border-b p-6 sm:px-8">
                   <h2 className="text-lg font-medium">
                     Pro
                     <span className="sr-only">Plan</span>

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 
 import '@/styles/globals.css'
-import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
@@ -17,14 +16,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-br" className="light">
+    <html lang="pt-br" className="light scroll-smooth">
       <body
         className={cn('bg-background font-sans antialiased', fontSans.variable)}
       >
         <div className="flex min-h-screen flex-1 flex-col">
           <SiteHeader />
           {children}
-          <SiteFooter />
         </div>
       </body>
     </html>

@@ -1,7 +1,8 @@
 'use client'
 
+import { ChevronRightIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
-import { useWindowScroll, useWindowSize } from 'react-use'
+import { useWindowScroll } from 'react-use'
 
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
@@ -10,18 +11,15 @@ import { Icons } from './icons'
 import { Button } from './ui/button'
 
 export function MainNav() {
-  const { height } = useWindowSize()
   const scroll = useWindowScroll()
 
-  const isPastHeroSection = scroll.y > height - 1
+  const isPastHeroSection = scroll.y > 1
 
   return (
     <div
       className={cn(
         'relative grid w-full grid-cols-3 rounded-full px-4 py-2 transition-all duration-200',
-        isPastHeroSection
-          ? 'bg-secondary shadow-[0px_-2px_0px_0px_var(--bg-secondary),0px_2px_0px_0px_var(--bg-secondary)]'
-          : 'bg-transparent',
+        isPastHeroSection ? 'bg-secondary shadow-sm' : 'bg-transparent',
       )}
     >
       <div className="relative z-[1] flex justify-start">
@@ -49,7 +47,7 @@ export function MainNav() {
           )}
           asChild
         >
-          <Link href="/cases">Cases</Link>
+          <Link href="#features">Features</Link>
         </Button>
         <Button
           variant="ghost"
@@ -59,11 +57,18 @@ export function MainNav() {
           )}
           asChild
         >
-          <Link href="/contato">Contato</Link>
+          <Link href="#testimonials">Depoimentos</Link>
         </Button>
       </div>
       <div className="relative z-[1] flex items-center justify-end">
-        <Button>Solicite uma Consulta</Button>
+        <Button
+          className="rounded-full"
+          variant="expandIcon"
+          iconPlacement="right"
+          Icon={ChevronRightIcon}
+        >
+          Solicite uma Consulta
+        </Button>
       </div>
     </div>
   )

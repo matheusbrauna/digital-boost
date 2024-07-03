@@ -1,5 +1,4 @@
 import { MainNav } from './main-nav'
-import { MobileNav } from './mobile-nav'
 
 export function SiteHeader() {
   return (

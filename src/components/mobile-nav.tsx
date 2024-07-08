@@ -1,28 +1,92 @@
+'use client'
+
+import {
+  ChevronRightIcon,
+  Cross2Icon,
+  HamburgerMenuIcon,
+} from '@radix-ui/react-icons'
+import Link from 'next/link'
+import { useState } from 'react'
+import { useMedia } from 'react-use'
+
+import { Icons } from '@/components/icons'
+import { Button } from '@/components/ui/button'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from '@/components/ui/sheet'
+import { siteConfig } from '@/config/site'
+
 export function MobileNav() {
+  const isDesktop = useMedia('(min-width: 1024px)', false)
+  const [open, setOpen] = useState(false)
+
+  if (isDesktop) return null
+
   return (
-    <div className="flex h-full w-full items-center lg:hidden">
-      <div className="flex w-full items-center justify-between rounded-full bg-neutral-50 px-2.5 py-1.5 shadow-[0px_-2px_0px_0px_var(--neutral-100),0px_2px_0px_0px_var(--neutral-100)] transition duration-200 dark:bg-neutral-900 dark:shadow-[0px_-2px_0px_0px_var(--neutral-800),0px_2px_0px_0px_var(--neutral-800)]">
-        <a
-          className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+    <div className="flex w-full animate-fade-up items-center justify-between lg:hidden">
+      <div className="flex w-full items-center justify-between rounded-full bg-secondary p-2.5 shadow-sm">
+        <Link
           href="/"
+          className="flex items-center"
+          onClick={() => setOpen(false)}
         >
-          <div className="h-5 w-6 rounded-bl-sm rounded-br-lg rounded-tl-lg rounded-tr-sm bg-black dark:bg-white"></div>
-          <span className="font-medium text-black dark:text-white">
-            Every AI
-          </span>
-        </a>
-        <svg
-          stroke="currentColor"
-          fill="currentColor"
-          stroke-width="0"
-          viewBox="0 0 512 512"
-          className="h-6 w-6 text-black dark:text-white"
-          height="1em"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M432 176H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zM432 272H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zM432 368H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16z"></path>
-        </svg>
+          <Icons.logo className="mr-2 size-6" aria-hidden="true" />
+          <span className="font-medium">{siteConfig.name}</span>
+          <span className="sr-only">Logo</span>
+        </Link>
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="size-6 hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
+            >
+              <HamburgerMenuIcon className="size-4" />
+              <span className="sr-only">Toggle Menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent
+            side="top"
+            className="min-h-screen bg-secondary p-8 pt-0"
+          >
+            <div className="flex h-16 items-center justify-between p-2.5">
+              <Link
+                href="/"
+                className="flex items-center"
+                onClick={() => setOpen(false)}
+              >
+                <Icons.logo className="mr-2 size-6" aria-hidden="true" />
+                <span className="font-medium">{siteConfig.name}</span>
+                <span className="sr-only">Logo</span>
+              </Link>
+              <SheetClose
+                className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
+                asChild
+              >
+                <Button variant="ghost" size="icon" className="size-6">
+                  <Cross2Icon className="size-4" />
+                  <span className="sr-only">Close</span>
+                </Button>
+              </SheetClose>
+            </div>
+            <div className="flex flex-col space-y-2 p-2.5">
+              <Link href="#">Serviços</Link>
+              <Link href="#">Features</Link>
+              <Link href="#">Depoimentos</Link>
+              <Button
+                className="rounded-full"
+                variant="expandIcon"
+                iconPlacement="right"
+                Icon={ChevronRightIcon}
+              >
+                Solicite uma Consulta
+              </Button>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
-import { HeroSection } from '@/components/hero-section'
 import { Companies } from '@/components/sections/companies'
 import { Features } from '@/components/sections/features'
+import { HeroSection } from '@/components/sections/hero-section'
 import { Pricing } from '@/components/sections/pricing'
 import { Testimonials } from '@/components/sections/testimonials'
 import { Separator } from '@/components/ui/separator'

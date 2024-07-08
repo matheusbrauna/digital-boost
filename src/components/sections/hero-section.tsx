@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 export function HeroSection() {
   return (
-    <section className="pb-8 pt-32">
+    <section className="pb-8 pt-24 lg:pt-32">
       <div className="container">
         <div className="flex items-center justify-center">
           <ShinyButton />
@@ -31,7 +31,7 @@ export function HeroSection() {
           </Button>
         </div>
         <div className="relative mt-20 animate-fade-up">
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-96 bg-gradient-to-b from-transparent via-background to-background" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[65%] bg-gradient-to-b from-transparent via-background to-background" />
           <div className="rounded-[32px] border bg-secondary p-3">
             <Image
               alt="header"

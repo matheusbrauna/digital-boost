@@ -1,27 +1,27 @@
 export const links = {
-  linkedin: '',
-  github: '',
+  linkedin: 'https://www.linkedin.com/in/matheus-brauna',
+  github: 'https://github.com/matheusbrauna',
 }
 
 export const siteConfig = {
   name: 'Digital Boost',
-  url: '',
-  email: '',
-  phone: '',
-  description: '',
+  url: 'https://digitalboost.com',
+  email: 'contato@digitalboost.com',
+  description:
+    'Impulsione sua presença online com nossas estratégias de marketing digital inovadoras e personalizadas.',
   links,
   mainNav: [
     {
-      title: '',
-      href: '',
+      href: '#services',
+      label: 'Serviços',
     },
     {
-      title: '',
-      href: '',
+      href: '#portfolio',
+      label: 'Portfólio',
     },
     {
-      title: '',
-      href: '',
+      href: '#about',
+      label: 'Sobre Nós',
     },
   ],
 }

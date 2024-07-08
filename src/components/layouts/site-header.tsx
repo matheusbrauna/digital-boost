@@ -1,5 +1,5 @@
-import { MainNav } from '@/components/main-nav'
-import { MobileNav } from '@/components/mobile-nav'
+import { MainNav } from '@/components/layouts/main-nav'
+import { MobileNav } from '@/components/layouts/mobile-nav'
 
 export function SiteHeader() {
   return (

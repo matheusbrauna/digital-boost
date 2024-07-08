@@ -1,10 +1,9 @@
 import { ChevronRightIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 
+import { Icons } from '@/components/icons'
+import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/config/site'
-
-import { Icons } from './icons'
-import { Button } from './ui/button'
 
 export function MainNav() {
   return (
@@ -16,15 +15,16 @@ export function MainNav() {
         </Link>
       </div>
       <div className="relative z-[1] flex items-center justify-center gap-2">
-        <Button variant="ghost" className="hover:text-foreground" asChild>
-          <Link href="/servicos">Serviços</Link>
-        </Button>
-        <Button variant="ghost" className="hover:text-foreground" asChild>
-          <Link href="#features">Features</Link>
-        </Button>
-        <Button variant="ghost" className="hover:text-foreground" asChild>
-          <Link href="#testimonials">Depoimentos</Link>
-        </Button>
+        {siteConfig.mainNav.map((link) => (
+          <Button
+            key={link.href}
+            variant="ghost"
+            className="hover:text-foreground"
+            asChild
+          >
+            <Link href={link.href}>{link.label}</Link>
+          </Button>
+        ))}
       </div>
       <div className="relative z-[1] flex items-center justify-end">
         <Button

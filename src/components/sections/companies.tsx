@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import Marquee from '../marquee'
+import { Marquee } from '@/components/marquee'
 
 const companies = [
   'Google',

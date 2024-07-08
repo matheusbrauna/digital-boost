@@ -9,7 +9,7 @@ interface MarqueeProps {
   repeat?: number
 }
 
-export default function Marquee({
+export function Marquee({
   className,
   reverse,
   pauseOnHover = false,

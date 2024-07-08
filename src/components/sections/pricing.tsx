@@ -1,52 +1,50 @@
-import { CheckIcon, Cross2Icon } from '@radix-ui/react-icons'
+import { PricingCard } from '@/components/pricing-card'
 
-import { Button } from '@/components/ui/button'
-
-// const plans = [
-//   {
-//     name: 'Plano Básico',
-//     desc: 'Ideal para pequenas empresas que estão começando no marketing digital.',
-//     price: 12,
-//     isMostPop: false,
-//     features: [
-//       'Análise básica de SEO',
-//       '2 campanhas de e-mail marketing',
-//       'Relatório mensal de performance',
-//       'Suporte via e-mail',
-//     ],
-//   },
-//   {
-//     name: 'Startup',
-//     desc: 'Perfeito para startups que precisam de uma presença digital forte.',
-//     price: 35,
-//     isMostPop: true,
-//     features: [
-//       'Análise avançada de SEO',
-//       '5 campanhas de e-mail marketing',
-//       'Relatório quinzenal de performance',
-//       'Suporte via chat e e-mail',
-//       'Gestão de redes sociais',
-//     ],
-//   },
-//   {
-//     name: 'Enterprise',
-//     desc: 'Para grandes empresas que buscam resultados expressivos no marketing digital.',
-//     price: 60,
-//     isMostPop: false,
-//     features: [
-//       'Análise completa de SEO',
-//       'Campanhas ilimitadas de e-mail marketing',
-//       'Relatório semanal de performance',
-//       'Suporte 24/7',
-//       'Gestão completa de redes sociais',
-//       'Consultoria personalizada',
-//     ],
-//   },
-// ]
+const pricingData = [
+  {
+    type: 'Básico',
+    description: 'Ideal para pequenas empresas começando sua jornada digital.',
+    price: 99,
+    features: [
+      { isIncluded: true, description: 'Gestão de Redes Sociais' },
+      { isIncluded: true, description: 'SEO Básico' },
+      { isIncluded: false, description: 'Campanhas PPC' },
+      { isIncluded: false, description: 'Relatórios Mensais' },
+    ],
+    isMostPopular: false,
+  },
+  {
+    type: 'Pro',
+    description:
+      'Perfeito para empresas em crescimento que buscam resultados mais robustos.',
+    price: 199,
+    features: [
+      { isIncluded: true, description: 'Gestão de Redes Sociais' },
+      { isIncluded: true, description: 'SEO Avançado' },
+      { isIncluded: true, description: 'Campanhas PPC' },
+      { isIncluded: false, description: 'Email Marketing Avançado' },
+    ],
+    isMostPopular: true,
+  },
+  {
+    type: 'Empresarial',
+    description:
+      'Solução completa para grandes empresas com necessidades complexas.',
+    price: 499,
+    features: [
+      { isIncluded: true, description: 'Gestão de Redes Sociais' },
+      { isIncluded: true, description: 'SEO Avançado' },
+      { isIncluded: true, description: 'Campanhas PPC' },
+      { isIncluded: true, description: 'Email Marketing Avançado' },
+      { isIncluded: true, description: 'Análise de Dados Personalizada' },
+    ],
+    isMostPopular: false,
+  },
+]
 
 export function Pricing() {
   return (
-    <section className="grid min-h-screen place-items-center py-8">
+    <section className="grid min-h-screen place-items-center bg-background py-8">
       <div className="container">
         <div className="px-4 md:px-8">
           <div className="text-balance sm:text-center">
@@ -64,226 +62,16 @@ export function Pricing() {
           </div>
           <div className="mt-12 max-w-screen-xl">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
-              <div className="divide-y rounded-2xl border shadow-sm">
-                <div className="p-6 sm:px-8">
-                  <h2 className="text-lg font-medium">
-                    Starter
-                    <span className="sr-only">Plan</span>
-                  </h2>
-                  <p className="mt-2 text-muted-foreground">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <p className="mt-2 sm:mt-4">
-                    <strong className="text-3xl font-bold sm:text-4xl">
-                      {' '}
-                      20${' '}
-                    </strong>
-
-                    <span className="text-sm font-medium text-muted-foreground">
-                      /month
-                    </span>
-                  </p>
-                  <Button className="mt-2 w-full" size="lg" variant="ringHover">
-                    Get Started
-                  </Button>
-                </div>
-
-                <div className="p-6 sm:px-8">
-                  <p className="text-lg font-medium sm:text-xl">
-                    What&apos;s included:
-                  </p>
-                  <ul className="mt-2 space-y-2 sm:mt-4">
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground"> 10 users </span>
-                    </li>
-
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        2GB of storage{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Email support{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <Cross2Icon className="size-5 text-rose-600" />
-
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Help center access{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <Cross2Icon className="size-5 text-rose-600" />
-
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Phone support{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <Cross2Icon className="size-5 text-rose-600" />
-
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Community access{' '}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="relative rounded-2xl border shadow-sm">
-                <Button
-                  variant="shine"
-                  className="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full"
-                >
-                  Mais popular
-                </Button>
-                <div className="border-b p-6 sm:px-8">
-                  <h2 className="text-lg font-medium">
-                    Pro
-                    <span className="sr-only">Plan</span>
-                  </h2>
-                  <p className="mt-2 text-muted-foreground">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <p className="mt-2 sm:mt-4">
-                    <strong className="text-3xl font-bold sm:text-4xl">
-                      {' '}
-                      30${' '}
-                    </strong>
-                    <span className="text-sm font-medium text-muted-foreground">
-                      /month
-                    </span>
-                  </p>
-                  <Button className="mt-2 w-full" size="lg" variant="ringHover">
-                    Get Started
-                  </Button>
-                </div>
-                <div className="p-6 sm:px-8">
-                  <p className="text-lg font-medium sm:text-xl">
-                    What&apos;s included:
-                  </p>
-                  <ul className="mt-2 space-y-2 sm:mt-4">
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground"> 20 users </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        5GB of storage{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Email support{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Help center access{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <Cross2Icon className="size-5 text-rose-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Phone support{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <Cross2Icon className="size-5 text-rose-600" />
-
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Community access{' '}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="divide-y rounded-2xl border shadow-sm">
-                <div className="p-6 sm:px-8">
-                  <h2 className="text-lg font-medium">
-                    Enterprise
-                    <span className="sr-only">Plan</span>
-                  </h2>
-                  <p className="mt-2 text-muted-foreground">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <p className="mt-2 sm:mt-4">
-                    <strong className="text-3xl font-bold sm:text-4xl">
-                      {' '}
-                      100${' '}
-                    </strong>
-                    <span className="text-sm font-medium text-muted-foreground">
-                      /month
-                    </span>
-                  </p>
-                  <Button className="mt-2 w-full" size="lg" variant="ringHover">
-                    Get Started
-                  </Button>
-                </div>
-                <div className="p-6 sm:px-8">
-                  <p className="text-lg font-medium sm:text-xl">
-                    What&apos;s included:
-                  </p>
-                  <ul className="mt-2 space-y-2 sm:mt-4">
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground"> 50 users </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        20GB of storage{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Email support{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Help center access{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Phone support{' '}
-                      </span>
-                    </li>
-                    <li className="flex items-center gap-1">
-                      <CheckIcon className="size-5 text-blue-600" />
-                      <span className="text-muted-foreground">
-                        {' '}
-                        Community access{' '}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              {pricingData.map((pricing) => (
+                <PricingCard
+                  key={pricing.type}
+                  type={pricing.type}
+                  description={pricing.description}
+                  price={pricing.price}
+                  features={pricing.features}
+                  isMostPopular={pricing.isMostPopular}
+                />
+              ))}
             </div>
           </div>
         </div>

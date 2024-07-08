@@ -17,28 +17,29 @@ export function SiteFooter() {
                 {siteConfig.name}
               </span>
             </Link>
-            <p className="mt-6 text-center leading-relaxed text-gray-500 md:max-w-md lg:text-left">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-              consequuntur amet culpa cum itaque neque.
+            <p className="mt-6 text-center leading-relaxed text-muted-foreground md:max-w-lg lg:text-left">
+              Impulsione sua presença online com nossas estratégias de marketing
+              digital inovadoras e personalizadas.
             </p>
           </div>
           <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
-            <li>
-              <Link href="#">About</Link>
-            </li>
-            <li>
-              <Link href="#">Services</Link>
-            </li>
-            <li>
-              <Link href="#">Projects</Link>
-            </li>
-            <li>
-              <Link href="#">Blog</Link>
-            </li>
+            {siteConfig.mainNav.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href}>{link.label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
-        <p className="mt-10 text-center text-sm text-gray-500 lg:text-right">
-          Copyright &copy; 2022. All rights reserved.
+        <p className="mt-10 text-center text-sm text-muted-foreground lg:text-right">
+          Feito com 💙 por{' '}
+          <Link
+            href={siteConfig.links.github}
+            className="underline transition-all hover:text-foreground"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Matheus Braúna
+          </Link>
         </p>
       </div>
     </footer>

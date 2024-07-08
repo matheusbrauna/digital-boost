@@ -52,7 +52,7 @@ export function Pricing() {
               Preços
             </h4>
             <h3 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              Planos para todos os tamanhos
+              Planos que encaixam no seu bolso
             </h3>
             <p className="mt-3 font-normal text-muted-foreground">
               Escolha o plano que melhor se adapta às necessidades da sua
@@ -61,7 +61,7 @@ export function Pricing() {
             </p>
           </div>
           <div className="mt-12 max-w-screen-xl">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:items-stretch md:grid-cols-3">
               {pricingData.map((pricing) => (
                 <PricingCard
                   key={pricing.type}

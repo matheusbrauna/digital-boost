@@ -12,8 +12,8 @@ export const siteConfig = {
   links,
   mainNav: [
     {
-      href: '#services',
-      label: 'Serviços',
+      href: '#solucoes',
+      label: 'Soluções',
     },
     {
       href: '#portfolio',

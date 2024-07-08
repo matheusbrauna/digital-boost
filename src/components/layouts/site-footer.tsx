@@ -6,7 +6,7 @@ import { siteConfig } from '@/config/site'
 
 export function SiteFooter() {
   return (
-    <footer className="mt-16 border-t py-8">
+    <footer className="mt-16 py-8">
       <div className="container relative py-4">
         <BackToTop />
         <div className="lg:flex lg:items-end lg:justify-between">

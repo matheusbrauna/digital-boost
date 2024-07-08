@@ -50,7 +50,7 @@ const thirdRow = testimonials.slice((testimonials.length / 3) * 2)
 export function Testimonials() {
   return (
     <section
-      id="testimonials"
+      id="depoimentos"
       className="grid min-h-screen place-items-center bg-background py-8"
     >
       <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">

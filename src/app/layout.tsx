@@ -6,6 +6,7 @@ import { SiteHeader } from '@/components/layouts/site-header'
 import { siteConfig } from '@/config/site'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
+import { ThemeProvider } from '@/providers/theme-provider'
 
 export const metadata: Metadata = {
   title: {
@@ -50,11 +51,18 @@ export default function RootLayout({
       <body
         className={cn('bg-background font-sans antialiased', fontSans.variable)}
       >
-        <div className="flex min-h-screen flex-1 flex-col">
-          <SiteHeader />
-          {children}
-          <SiteFooter />
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex min-h-screen flex-1 flex-col">
+            <SiteHeader />
+            {children}
+            <SiteFooter />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )

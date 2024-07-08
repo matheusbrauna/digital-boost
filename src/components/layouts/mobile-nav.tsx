@@ -1,23 +1,16 @@
 'use client'
 
-import {
-  ChevronRightIcon,
-  Cross2Icon,
-  HamburgerMenuIcon,
-} from '@radix-ui/react-icons'
+import { ChevronRightIcon, HamburgerMenuIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useMedia } from 'react-use'
 
 import { Icons } from '@/components/icons'
 import { Button } from '@/components/ui/button'
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetTrigger,
-} from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { siteConfig } from '@/config/site'
+
+import { ModeToggle } from '../mode-toggle'
 
 export function MobileNav() {
   const isDesktop = useMedia('(min-width: 1024px)', false)
@@ -62,15 +55,6 @@ export function MobileNav() {
                 <span className="font-medium">{siteConfig.name}</span>
                 <span className="sr-only">Logo</span>
               </Link>
-              <SheetClose
-                className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
-                asChild
-              >
-                <Button variant="ghost" size="icon" className="size-6">
-                  <Cross2Icon className="size-4" />
-                  <span className="sr-only">Close</span>
-                </Button>
-              </SheetClose>
             </div>
             <div className="flex flex-col space-y-2 p-2.5">
               <Link href="#">Serviços</Link>
@@ -81,9 +65,13 @@ export function MobileNav() {
                 variant="expandIcon"
                 iconPlacement="right"
                 Icon={ChevronRightIcon}
+                asChild
               >
-                Solicite uma Consulta
+                <Link href="#">Consulta</Link>
               </Button>
+              <div className="mx-auto">
+                <ModeToggle />
+              </div>
             </div>
           </SheetContent>
         </Sheet>

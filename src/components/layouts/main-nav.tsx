@@ -2,6 +2,7 @@ import { ChevronRightIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 
 import { Icons } from '@/components/icons'
+import { ModeToggle } from '@/components/mode-toggle'
 import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/config/site'
 
@@ -26,14 +27,15 @@ export function MainNav() {
           </Button>
         ))}
       </div>
-      <div className="relative z-[1] flex items-center justify-end">
+      <div className="relative z-[1] flex items-center justify-end space-x-2">
+        <ModeToggle />
         <Button
           className="rounded-full"
           variant="expandIcon"
           iconPlacement="right"
           Icon={ChevronRightIcon}
         >
-          Solicite uma Consulta
+          <Link href="#consulta">Solicite uma Consulta</Link>
         </Button>
       </div>
     </div>

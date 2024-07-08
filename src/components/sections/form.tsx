@@ -1,10 +1,11 @@
 import { ChevronRightIcon } from '@radix-ui/react-icons'
+import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 
 export function Form() {
   return (
-    <section className="py-8">
+    <section id="consulta" className="py-8">
       <div className="container grid place-items-center">
         <strong className="block text-center text-xl font-bold sm:text-3xl">
           Solicite uma consulta conosco
@@ -25,8 +26,9 @@ export function Form() {
               iconPlacement="right"
               Icon={ChevronRightIcon}
               className="absolute end-1 top-1/2 -translate-y-1/2 rounded-full"
+              asChild
             >
-              Solicitar Consulta
+              <Link href="#consulta">Solicitar Consulta</Link>
             </Button>
           </div>
         </form>

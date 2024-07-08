@@ -17,6 +17,7 @@ export default function Home() {
       <Separator className="container relative z-10 bg-gradient-to-r from-background via-muted to-background" />
       <Pricing />
       <Form />
+      <Separator className="container relative z-10 mt-16 bg-gradient-to-r from-background via-muted to-background" />
     </main>
   )
 }

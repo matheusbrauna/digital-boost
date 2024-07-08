@@ -5,8 +5,7 @@ export const links = {
 
 export const siteConfig = {
   name: 'Digital Boost',
-  url: 'https://digitalboost.com',
-  email: 'contato@digitalboost.com',
+  url: 'https://digital-boost.vercel.app',
   description:
     'Impulsione sua presença online com nossas estratégias de marketing digital inovadoras e personalizadas.',
   links,
@@ -16,12 +15,12 @@ export const siteConfig = {
       label: 'Soluções',
     },
     {
-      href: '#portfolio',
-      label: 'Portfólio',
+      href: '#depoimentos',
+      label: 'Depoimentos',
     },
     {
-      href: '#about',
-      label: 'Sobre Nós',
+      href: '#precos',
+      label: 'Preços',
     },
   ],
 }

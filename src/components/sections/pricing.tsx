@@ -44,7 +44,10 @@ const pricingData = [
 
 export function Pricing() {
   return (
-    <section className="grid min-h-screen place-items-center bg-background py-8">
+    <section
+      id="precos"
+      className="grid min-h-screen place-items-center bg-background py-8"
+    >
       <div className="container">
         <div className="px-4 md:px-8">
           <div className="text-balance sm:text-center">

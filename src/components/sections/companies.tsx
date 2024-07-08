@@ -15,7 +15,7 @@ const companies = [
 
 export function Companies() {
   return (
-    <section className="py-8">
+    <section id="empresas" className="py-8">
       <div className="container relative">
         <h3 className="text-center text-sm font-semibold uppercase text-muted-foreground">
           Parceiros que confiam na Digital Boost

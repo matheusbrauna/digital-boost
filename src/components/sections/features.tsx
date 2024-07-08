@@ -58,7 +58,7 @@ const features = [
 export function Features() {
   return (
     <section
-      id="features"
+      id="solucoes"
       className="grid min-h-screen place-items-center py-8"
     >
       <div className="container">

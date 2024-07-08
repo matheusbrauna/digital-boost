@@ -26,9 +26,9 @@ export function Companies() {
               <Image
                 key={idx}
                 src={`https://cdn.magicui.design/companies/${logo}.svg`}
-                width="160"
-                height="40"
-                className="h-10 w-40 cursor-pointer px-2 dark:brightness-0 dark:invert"
+                width={160}
+                height={40}
+                className="cursor-pointer px-2 dark:brightness-0 dark:invert"
                 alt={logo}
               />
             ))}

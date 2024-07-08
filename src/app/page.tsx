@@ -1,5 +1,6 @@
 import { Companies } from '@/components/sections/companies'
 import { Features } from '@/components/sections/features'
+import { Form } from '@/components/sections/form'
 import { HeroSection } from '@/components/sections/hero-section'
 import { Pricing } from '@/components/sections/pricing'
 import { Testimonials } from '@/components/sections/testimonials'
@@ -15,6 +16,7 @@ export default function Home() {
       <Testimonials />
       <Separator className="container relative z-10 bg-gradient-to-r from-background via-muted to-background" />
       <Pricing />
+      <Form />
     </main>
   )
 }

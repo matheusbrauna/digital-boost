@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import '@/styles/globals.css'
+import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
@@ -23,6 +24,7 @@ export default function RootLayout({
         <div className="flex min-h-screen flex-1 flex-col">
           <SiteHeader />
           {children}
+          <SiteFooter />
         </div>
       </body>
     </html>

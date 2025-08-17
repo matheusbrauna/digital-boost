@@ -37,7 +37,7 @@ export function HeroSection() {
           <div className="rounded-[32px] border bg-secondary p-3">
             <Image
               alt="header"
-              loading="lazy"
+              priority
               width="1920"
               height="1080"
               className="rounded-3xl"

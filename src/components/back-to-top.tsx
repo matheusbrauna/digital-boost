@@ -17,6 +17,7 @@ export function BackToTop() {
       size="icon"
       className="group absolute end-4 top-4 rounded-full sm:end-6 sm:top-6 lg:end-8 lg:top-4"
       onClick={handleScrollToTop}
+      aria-label="Voltar ao topo"
     >
       <ChevronUpIcon className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5" />
     </Button>

@@ -51,12 +51,12 @@ export function Pricing() {
       <div className="container">
         <div className="px-4 md:px-8">
           <div className="text-balance sm:text-center">
-            <h4 className="text-xl font-medium tracking-tight text-muted-foreground">
+            <h3 className="text-xl font-medium tracking-tight text-muted-foreground">
               Preços
-            </h4>
-            <h3 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              Planos que encaixam no seu bolso
             </h3>
+            <h4 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Planos que encaixam no seu bolso
+            </h4>
             <p className="mt-3 font-normal text-muted-foreground">
               Escolha o plano que melhor se adapta às necessidades da sua
               empresa e acelere seu crescimento com nossas estratégias de

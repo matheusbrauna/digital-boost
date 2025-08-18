@@ -1,6 +1,7 @@
 import { ChevronRightIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 import Link from 'next/link'
+import heroImg from "@/assets/hero-light.jpg"
 
 import { ShinyButton } from '@/components/shiny-button'
 import { Button } from '@/components/ui/button'
@@ -38,10 +39,8 @@ export function HeroSection() {
             <Image
               alt="header"
               priority
-              width="1920"
-              height="1080"
               className="rounded-3xl"
-              src="/hero-light.jpg"
+              src={heroImg}
             />
           </div>
         </div>

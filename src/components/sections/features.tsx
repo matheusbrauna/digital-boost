@@ -62,9 +62,9 @@ export function Features() {
       className="grid min-h-screen place-items-center py-8"
     >
       <div className="container">
-        <h2 className="text-balance text-center text-3xl font-medium tracking-tight md:text-5xl md:leading-tight">
+        <h3 className="text-balance text-center text-3xl font-medium tracking-tight md:text-5xl md:leading-tight">
           Descubra Nossas Soluções de Marketing Digital
-        </h2>
+        </h3>
         <p className="my-4 text-balance text-center text-sm font-normal text-muted-foreground md:text-base">
           A Digital Boost oferece uma gama de serviços projetados para
           transformar sua presença online e impulsionar seu crescimento.

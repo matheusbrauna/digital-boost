@@ -17,9 +17,9 @@ export function Companies() {
   return (
     <section id="empresas" className="py-8">
       <div className="container relative">
-        <h3 className="text-center text-sm font-semibold uppercase text-muted-foreground">
+        <h2 className="text-center text-sm font-semibold uppercase text-muted-foreground">
           Parceiros que confiam na Digital Boost
-        </h3>
+        </h2>
         <div className="mt-6">
           <Marquee pauseOnHover className="[--duration:20s]">
             {companies.map((logo, idx) => (
